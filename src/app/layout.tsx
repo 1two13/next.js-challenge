@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -14,23 +15,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <h1>
-          <a href="/">WEB</a>
+          <Link href="/">WEB</Link>
         </h1>
         <ol>
           <li>
-            <a href="/read/1">html</a>
+            <Link href="/read/1">html</Link>
           </li>
           <li>
-            <a href="/read/2">css</a>
+            <Link href="/read/2">css</Link>
           </li>
         </ol>
         {children}
         <ul>
           <li>
-            <a href="/create">Create</a>
+            <Link href="/create">Create</Link>
           </li>
           <li>
-            <a href="/update/1">Update</a>
+            <Link href="/update/1">Update</Link>
           </li>
           <li>
             <input type="button" value="delete" />
